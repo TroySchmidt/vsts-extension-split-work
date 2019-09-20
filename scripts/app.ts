@@ -232,7 +232,7 @@ function showDialog(workItemId: number) {
 
     VSS.getService(VSS.ServiceIds.Dialog).then((dialogSvc: IHostDialogService) => {
         var extensionCtx = VSS.getExtensionContext();
-        var splitWorkDialogContributionId = extensionCtx.publisherId + "." + extensionCtx.extensionId + ".vsts-extension-split-work-dialog";
+        var splitWorkDialogContributionId = extensionCtx.publisherId + "." + extensionCtx.extensionId + ".factor-split-work-dialog";
         dialogSvc.openDialog(splitWorkDialogContributionId , dialogOptions).then((dialog: IExternalDialog) => {
             _dialog = dialog;
             dialog.getContributionInstance(splitWorkDialogContributionId ).then((contribution: any) => {
